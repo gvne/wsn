@@ -14,10 +14,14 @@ export class AuthComponent implements OnInit {
     thumbnail: "https://picsum.photos/200/200"
   };
 
+  private isDisplayingDetails: boolean = false;
+
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { }
 
+  toggleDetails() {
+    this.isDisplayingDetails = !this.isDisplayingDetails;
   }
 
 }
