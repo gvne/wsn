@@ -7,7 +7,10 @@ import { AuthComponent } from './auth/auth.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material';
 import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
+// flex
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { MatCardModule } from '@angular/material/card';
 
     BrowserAnimationsModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatToolbarModule,
+
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
