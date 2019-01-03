@@ -10,7 +10,8 @@ export class AuthComponent implements OnInit {
   user: User = {
     name: "vincke",
     surname: "guillaume",
-    email: "guillaume.vincke@gmail.com"
+    email: "guillaume.vincke@gmail.com",
+    thumbnail: "https://picsum.photos/200/200"
   };
 
   constructor() { }

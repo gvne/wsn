@@ -6,6 +6,7 @@ import { AuthComponent } from './auth/auth.component';
 // Material related imports
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -16,7 +17,9 @@ import { MatButtonModule } from '@angular/material';
   imports: [
     BrowserModule,
 
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
