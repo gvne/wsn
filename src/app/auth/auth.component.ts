@@ -12,28 +12,23 @@ import { User } from '../user'
   styleUrls: ['./auth.component.css']
 })
 export class AuthComponent implements OnInit {
-  user: User = {
-    name: "vincke",
-    surname: "guillaume",
-    email: "guillaume.vincke@gmail.com",
-    thumbnail: "https://picsum.photos/200/200"
-  };
-
   constructor(
     public dialog: MatDialog,
     private auth: AuthService
   ) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+  }
 
   onLoginClick(): void {
+    if (!this.auth.loggedInUser) {
+      this.auth.login();
+      return;
+    }
+
     // open the user dialog
     const dialogRef = this.dialog.open(AuthDialog, {
-      data: this.user
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+      data: this.auth
     });
   }
 }

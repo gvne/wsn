@@ -1,5 +1,5 @@
 <div mat-dialog-content>
-  <app-user-detail [user]="user"></app-user-detail>
+  <app-user-detail [user]="auth.loggedInUser"></app-user-detail>
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onOkClick()">Ok</button>
