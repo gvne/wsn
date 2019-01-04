@@ -10,10 +10,12 @@ import { MatButtonModule } from '@angular/material';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 // flex
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     AuthComponent,
     AuthDialog,
     UserDetailComponent,
+    ToolbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,6 +33,7 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     MatCardModule,
     MatToolbarModule,
     MatDialogModule,
+    MatToolbarModule,
 
     FlexLayoutModule
   ],
