@@ -3,15 +3,6 @@
     {{user.surname}} {{user.name | uppercase}}
   </button>
 </div>
-<div>
-  <mat-card *ngIf="isDisplayingDetails" style="display: inline-block">
-    <mat-card-header>
-      <img src={{user.thumbnail}} mat-card-avatar/>
-      <mat-card-title>{{user.surname}} {{user.name | uppercase}}</mat-card-title>
-      <mat-card-subtitle>{{user.email}}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-actions>
-      <button mat-button>Logout</button>
-    </mat-card-actions>
-  </mat-card>
+<div *ngIf="isDisplayingDetails">
+  <app-user-detail [user]="user"></app-user-detail>
 </div>

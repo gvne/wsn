@@ -11,11 +11,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 // flex
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { UserDetailComponent } from './user-detail/user-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AuthComponent
+    AuthComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,
