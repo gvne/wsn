@@ -1,6 +1,8 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
+import { User } from '../user'
+
 @Component({
   selector: 'app-auth-dialog',
   templateUrl: './auth.dialog.html',

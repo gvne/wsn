@@ -2,6 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog } from '@angular/material';
 
 import { AuthDialog } from './auth.dialog';
+import { AuthService } from '../auth.service';
 
 import { User } from '../user'
 
@@ -18,7 +19,10 @@ export class AuthComponent implements OnInit {
     thumbnail: "https://picsum.photos/200/200"
   };
 
-  constructor(public dialog: MatDialog) { }
+  constructor(
+    public dialog: MatDialog,
+    private auth: AuthService
+  ) { }
 
   ngOnInit() { }
 
