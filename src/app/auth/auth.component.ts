@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialog } from '@angular/material';
+
+import { AuthDialog } from './auth.dialog';
+
 import { User } from '../user'
 
 @Component({
@@ -14,14 +18,18 @@ export class AuthComponent implements OnInit {
     thumbnail: "https://picsum.photos/200/200"
   };
 
-  private isDisplayingDetails: boolean = false;
-
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() { }
 
-  toggleDetails() {
-    this.isDisplayingDetails = !this.isDisplayingDetails;
-  }
+  onLoginClick(): void {
+    // open the user dialog
+    const dialogRef = this.dialog.open(AuthDialog, {
+      data: this.user
+    });
 
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
 }

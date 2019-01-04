@@ -1,8 +1,5 @@
 <div>
-  <button mat-button (click)="toggleDetails()">
+  <button mat-button (click)="onLoginClick()">
     {{user.surname}} {{user.name | uppercase}}
   </button>
-</div>
-<div *ngIf="isDisplayingDetails">
-  <app-user-detail [user]="user"></app-user-detail>
 </div>
