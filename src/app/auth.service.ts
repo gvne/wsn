@@ -81,9 +81,7 @@ export class AuthService {
           return;
         }
         this.exchangeCodeToAccessToken(queryParams["code"]).subscribe(
-          token => {
-            console.log(token);
-          }
+          token => { this.loggedInUser = User.fromToken(token); }
         )
       }
     );

@@ -1,7 +1,8 @@
 <div>
   <button mat-button (click)="onLoginClick()">
     <span *ngIf="auth.loggedInUser;else other_content">
-      {{auth.loggedInUser.surname}} {{auth.loggedInUser.name | uppercase}}
+      <!-- {{auth.loggedInUser.surname}} {{auth.loggedInUser.name | uppercase}} -->
+      {{auth.loggedInUser.email}}
     </span>
     <ng-template #other_content>Login</ng-template>
   </button>
