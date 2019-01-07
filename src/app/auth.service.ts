@@ -10,16 +10,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { authClient, authConfig } from '../environments/auth.environment';
-import { User } from './user'
-
-// TODO: move in a separated file
-export interface OAuthToken {
- access_token: string,
- refresh_token: string,
- id_token: string,
- token_type: string,
- expires_in: number
-}
+import { User } from './user';
+import { OAuthToken } from './oauth-token';
 
 @Injectable({
   providedIn: 'root'
