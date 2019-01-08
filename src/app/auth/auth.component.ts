@@ -19,16 +19,4 @@ export class AuthComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  onLoginClick(): void {
-    if (!this.auth.loggedInUser) {
-      this.auth.login();
-      return;
-    }
-
-    // open the user dialog
-    const dialogRef = this.dialog.open(AuthDialog, {
-      data: this.auth
-    });
-  }
 }

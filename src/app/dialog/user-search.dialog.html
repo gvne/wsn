@@ -1,0 +1,12 @@
+<div mat-dialog-content>
+  <mat-form-field>
+    <input
+      type="text"
+      placeholder="E-mail"
+      matInput
+      [formControl]="searchControl">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCloseClick()">Close</button>
+</div>

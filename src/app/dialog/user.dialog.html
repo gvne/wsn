@@ -1,0 +1,7 @@
+<div mat-dialog-content>
+  <app-user-detail [user]="auth.loggedInUser"></app-user-detail>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onOkClick()">Ok</button>
+  <button mat-button (click)="onLogoutClick()">Logout</button>
+</div>

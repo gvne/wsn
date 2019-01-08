@@ -1,15 +1,15 @@
-<div>
-  <button mat-button (click)="onLoginClick()">
-    <span *ngIf="auth.loggedInUser;else other_content">
-      <!-- name / family name isn't always available but email is. Then display the
-      email if the rest isn't available -->
-      <span *ngIf="auth.loggedInUser.name;else display_email">
-        {{auth.loggedInUser.surname}} {{auth.loggedInUser.name | uppercase}}
-      </span>
-      <ng-template #display_email>
-        {{auth.loggedInUser.email}}
-      </ng-template>
+<app-dialog-button type="user" *ngIf="auth.loggedInUser;else login_button">
+    <!-- name / family name isn't always available but email is. Then display the
+    email if the rest isn't available -->
+    <span *ngIf="auth.loggedInUser.name;else display_email">
+      {{auth.loggedInUser.surname}} {{auth.loggedInUser.name | uppercase}}
     </span>
-    <ng-template #other_content>Login</ng-template>
-  </button>
-</div>
+    <ng-template #display_email>
+      {{auth.loggedInUser.email}}
+    </ng-template>
+  <ng-template #other_content>Login</ng-template>
+</app-dialog-button>
+
+<ng-template #login_button>
+  <button mat-button (click)="auth.login()">Login</button>
+</ng-template>
