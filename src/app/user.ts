@@ -22,3 +22,11 @@ export class User {
     return user;
   }
 }
+
+/**
+ * The output of the User api detail enpoint
+ */
+export interface UserDetails {
+  family_name: string;
+  name: string;
+}

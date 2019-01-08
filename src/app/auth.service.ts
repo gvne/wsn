@@ -10,7 +10,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { authClient, authConfig } from '../environments/auth.environment';
-import { User } from './user';
+import { User, UserDetails } from './user';
 import { OAuthToken } from './oauth-token';
 
 @Injectable({
@@ -81,7 +81,18 @@ export class AuthService {
           return;
         }
         this.exchangeCodeToAccessToken(queryParams["code"]).subscribe(
-          token => { this.loggedInUser = User.fromToken(token); }
+          token => {
+            this.loggedInUser = User.fromToken(token);
+            // read the extra details
+            this.http.get<UserDetails>(
+              authConfig.detailEndpoint + this.loggedInUser.username
+            ).subscribe(
+              userDetails => {
+                this.loggedInUser.name = userDetails.family_name;
+                this.loggedInUser.surname = userDetails.name;
+              }
+            )
+          }
         )
       }
     );
