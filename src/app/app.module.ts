@@ -5,8 +5,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
-import { AuthDialog } from './auth/auth.dialog';
-import { SearchDialog } from './search/search.dialog';
+import { UserDetailComponent } from './user-detail/user-detail.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { AppRoutingModule } from './app-routing.module';
+import { DialogButtonComponent } from './dialog-button/dialog-button.component';
+
 import { UserDialog } from './dialog/user.dialog';
 import { UserSearchDialog } from './dialog/user-search.dialog';
 
@@ -22,25 +25,17 @@ import { MatInputModule } from '@angular/material';
 
 // flex
 import { FlexLayoutModule } from "@angular/flex-layout";
-import { UserDetailComponent } from './user-detail/user-detail.component';
-import { ToolbarComponent } from './toolbar/toolbar.component';
-import { AppRoutingModule } from './app-routing.module';
-import { SearchComponent } from './search/search.component';
-import { DialogButtonComponent } from './dialog-button/dialog-button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthComponent,
-    AuthDialog,
     UserDetailComponent,
     ToolbarComponent,
-    SearchComponent,
-    SearchDialog,
-    UserDialog,
-    UserSearchDialog,
+    DialogButtonComponent,
 
-    DialogButtonComponent
+    UserDialog,
+    UserSearchDialog
   ],
   imports: [
     BrowserModule,
@@ -64,8 +59,6 @@ import { DialogButtonComponent } from './dialog-button/dialog-button.component';
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [
-    AuthDialog,
-    SearchDialog,
     UserDialog,
     UserSearchDialog,
   ],

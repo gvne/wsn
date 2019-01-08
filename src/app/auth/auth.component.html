@@ -1,3 +1,4 @@
+<!-- show the current user dialog if any logged in. Else show a login button -->
 <app-dialog-button type="user" *ngIf="auth.loggedInUser;else login_button">
     <!-- name / family name isn't always available but email is. Then display the
     email if the rest isn't available -->
