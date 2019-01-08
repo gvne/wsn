@@ -5,6 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
 import { AuthDialog } from './auth/auth.dialog';
+import { SearchDialog } from './search/search.dialog';
+
 // Material related imports
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material';
@@ -17,6 +19,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { AppRoutingModule } from './app-routing.module';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,8 @@ import { AppRoutingModule } from './app-routing.module';
     AuthDialog,
     UserDetailComponent,
     ToolbarComponent,
+    SearchComponent,
+    SearchDialog
   ],
   imports: [
     BrowserModule,
@@ -42,6 +47,9 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [AuthDialog],
+  entryComponents: [
+    AuthDialog,
+    SearchDialog
+  ],
 })
 export class AppModule { }

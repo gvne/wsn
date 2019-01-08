@@ -18,12 +18,6 @@ import { OAuthToken } from './oauth-token';
 })
 export class AuthService {
   loggedInUser: User = null;
-  // loggedInUser: User = {
-  //   name: "vincke",
-  //   surname: "guillaume",
-  //   email: "guillaume.vincke@gmail.com",
-  //   thumbnail: "https://picsum.photos/200/200"
-  // };
 
   constructor(
     @Inject(DOCUMENT) private document: any,
@@ -85,7 +79,7 @@ export class AuthService {
             this.loggedInUser = User.fromToken(token);
             // read the extra details
             this.http.get<UserDetails>(
-              authConfig.detailEndpoint + this.loggedInUser.username
+              authConfig.userEndpoint + this.loggedInUser.username
             ).subscribe(
               userDetails => {
                 this.loggedInUser.name = userDetails.family_name;
