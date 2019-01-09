@@ -79,7 +79,7 @@ export class AuthService {
             this.loggedInUser = User.fromToken(token);
             // read the extra details
             this.http.get<UserDetails>(
-              authConfig.userEndpoint + this.loggedInUser.username
+              authConfig.userEndpoint + this.loggedInUser.id
             ).subscribe(
               userDetails => {
                 this.loggedInUser.family_name = userDetails.family_name;

@@ -10,7 +10,6 @@ export class AppComponent {
   title = 'whatsnext';
 
   onUserSelected(user: User) {
-    console.log("ici");
     console.log(user);
   }
 }

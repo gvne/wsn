@@ -3,7 +3,7 @@
     <!-- name / family name isn't always available but email is. Then display the
     email if the rest isn't available -->
     <span *ngIf="auth.loggedInUser.name;else display_email">
-      {{auth.loggedInUser.name}} {{auth.loggedInUser.family_name | uppercase}}
+      {{auth.loggedInUser.name}}
     </span>
     <ng-template #display_email>
       {{auth.loggedInUser.email}}

@@ -14,8 +14,9 @@ export class User {
     let idToken = token.id_token;
     var payload = KJUR.jws.JWS.readSafeJSONString(atob(accessToken.split(".")[1]));
     var id = KJUR.jws.JWS.readSafeJSONString(atob(idToken.split(".")[1]));
-
+    
     let user: User = {
+      id: payload.username,
       username: payload.sub,
       email: id.email
     };
