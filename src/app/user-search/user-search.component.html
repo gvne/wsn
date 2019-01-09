@@ -1,0 +1,19 @@
+<div>
+  <form (ngSubmit)="search()">
+    <mat-form-field>
+      <input
+        type="text"
+        placeholder="E-mail"
+        matInput
+        [formControl]="searchControl">
+    </mat-form-field>
+    <button mat-button type="submit" style="display:none;"></button>
+  </form>
+</div>
+<div>
+  <mat-grid-list cols="1">
+    <mat-grid-tile *ngFor="let suggestion of suggestions">
+      <app-user-detail [user]="suggestion"></app-user-detail>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

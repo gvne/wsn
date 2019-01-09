@@ -1,24 +1,7 @@
-<form (ngSubmit)="search()">
 <div mat-dialog-content>
-  <mat-form-field>
-    <input
-      type="text"
-      placeholder="E-mail"
-      matInput
-      [formControl]="searchControl">
-  </mat-form-field>
-  <button mat-button type="submit" style="display:none;"></button>
-</div>
-
-<div>
-  <mat-grid-list cols="1">
-    <mat-grid-tile *ngFor="let suggestion of suggestions">
-      <app-user-detail [user]="suggestion"></app-user-detail>
-    </mat-grid-tile>
-  </mat-grid-list>
+  <app-user-search></app-user-search>
 </div>
 
 <div mat-dialog-actions>
   <button mat-button (click)="onCloseClick()">Close</button>
 </div>
-</form>

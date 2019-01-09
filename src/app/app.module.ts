@@ -3,16 +3,6 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { AppComponent } from './app.component';
-import { AuthComponent } from './auth/auth.component';
-import { UserDetailComponent } from './user-detail/user-detail.component';
-import { ToolbarComponent } from './toolbar/toolbar.component';
-import { AppRoutingModule } from './app-routing.module';
-import { DialogButtonComponent } from './dialog-button/dialog-button.component';
-
-import { UserDialog } from './dialog/user.dialog';
-import { UserSearchDialog } from './dialog/user-search.dialog';
-
 // Material related imports
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material';
@@ -27,6 +17,17 @@ import { MatGridListModule } from '@angular/material/grid-list';
 // flex
 import { FlexLayoutModule } from "@angular/flex-layout";
 
+import { UserDialog } from './dialog/user.dialog';
+import { UserSearchDialog } from './dialog/user-search.dialog';
+
+import { AppComponent } from './app.component';
+import { AuthComponent } from './auth/auth.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { AppRoutingModule } from './app-routing.module';
+import { DialogButtonComponent } from './dialog-button/dialog-button.component';
+import { UserSearchComponent } from './user-search/user-search.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,8 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     DialogButtonComponent,
 
     UserDialog,
-    UserSearchDialog
+    UserSearchDialog,
+    UserSearchComponent
   ],
   imports: [
     BrowserModule,
