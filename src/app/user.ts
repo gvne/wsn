@@ -4,8 +4,8 @@ import { KJUR } from "jsrsasign";
 export class User {
   email?: string = null;
   username: string = null;
+  family_name?: string = null;
   name?: string = null;
-  surname?: string = null;
   thumbnail?: string = null;
 
 

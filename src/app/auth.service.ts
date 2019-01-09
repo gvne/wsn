@@ -82,8 +82,8 @@ export class AuthService {
               authConfig.userEndpoint + this.loggedInUser.username
             ).subscribe(
               userDetails => {
-                this.loggedInUser.name = userDetails.family_name;
-                this.loggedInUser.surname = userDetails.name;
+                this.loggedInUser.family_name = userDetails.family_name;
+                this.loggedInUser.name = userDetails.name;
               }
             )
           }
