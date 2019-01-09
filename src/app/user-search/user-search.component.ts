@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, EventEmitter, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { FormControl } from '@angular/forms';
@@ -11,6 +11,7 @@ import { authConfig } from '../../environments/auth.environment';
   styleUrls: ['./user-search.component.css']
 })
 export class UserSearchComponent implements OnInit {
+  @Output() userSelected = new EventEmitter<User>();
   private searchControl: FormControl;
   private suggestions: User[];
 
@@ -29,4 +30,9 @@ export class UserSearchComponent implements OnInit {
         this.suggestions = result;
       });
   }
+
+  onUserClick(user: User) {
+    this.userSelected.emit(user);
+  }
+
 }

@@ -13,7 +13,10 @@
 <div>
   <mat-grid-list cols="1">
     <mat-grid-tile *ngFor="let suggestion of suggestions">
-      <app-user-detail [user]="suggestion"></app-user-detail>
+      <app-user-detail
+        [user]="suggestion"
+        (click)="onUserClick(suggestion)">
+      </app-user-detail>
     </mat-grid-tile>
   </mat-grid-list>
 </div>

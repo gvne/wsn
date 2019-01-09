@@ -1,5 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <app-toolbar></app-toolbar>
+
 <div>
-  <app-user-search></app-user-search>
+  <app-user-search (userSelected)="onUserSelected($event)"></app-user-search>
 </div>
