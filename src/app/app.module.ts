@@ -22,6 +22,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 // flex
 import { FlexLayoutModule } from "@angular/flex-layout";
@@ -53,6 +54,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     MatAutocompleteModule,
     MatFormFieldModule,
     MatInputModule,
+    MatGridListModule,
 
     FlexLayoutModule
   ],

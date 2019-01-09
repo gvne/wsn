@@ -23,16 +23,23 @@ export class UserSearchDialog {
 
   ngOnInit() {
     this.searchControl = new FormControl('');
-    // this.searchControl.valueChanges.subscribe(
-    //   () => { this.suggestCompletion(); }
-    // );
   }
 
   onOkClick(): void {
     this.dialogRef.close();
   }
+
   onCloseClick(): void {
     this.dialogRef.close();
+  }
+
+  search() {
+    let queryString = this.searchControl.value;
+    this.http.get<User[]>(authConfig.userEndpoint + "?q=" + queryString).
+      subscribe(result => {
+        this.suggestions = result;
+        this.isSearching = false;
+      });
   }
   // suggestCompletion() {
   //   // TODO: find a way to limit the number of query made to the search api as
