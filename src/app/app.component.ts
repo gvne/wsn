@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LobbyService } from './lobby.service';
+import { AuthService } from './auth.service';
 // import { User } from './user';
 
 @Component({
@@ -11,6 +12,7 @@ export class AppComponent {
   title = 'whatsnext';
 
   constructor(
+    private auth: AuthService,
     private lobby: LobbyService
   ) {}
 

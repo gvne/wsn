@@ -1,10 +1,33 @@
 <app-toolbar></app-toolbar>
 
-<!-- if the lobby owner is set, this means that we are connected to a lobby. We need
-to display the actual app. Else, we just display the front page -->
-<div *ngIf="lobby.owner;else display_frontpage">
-  <app-lobby></app-lobby>
+<!-- <mat-drawer-container> -->
+  <!-- <mat-drawer mode="slide" opened>Drawer content</mat-drawer> -->
+
+  <!-- <mat-drawer-content> -->
+    <!-- if the lobby owner is set, this means that we are connected to a lobby. We need
+    to display the actual app. Else, we just display the front page -->
+    <div *ngIf="lobby.owner;else display_frontpage">
+      <app-lobby></app-lobby>
+    </div>
+    <ng-template #display_frontpage>
+      <app-front-page></app-front-page>
+    </ng-template>
+  <!-- </mat-drawer-content> -->
+<!-- </mat-drawer-container> -->
+
+<!-- Footer -->
+<div class="footer">
+  <a href="#" *ngIf="auth.loggedInUser ;else show_login">Se déconnecter</a>
+  <ng-template #show_login>
+    <a href="#">Se connecter</a>
+  </ng-template>
+
+  <a href="#">Paramètres</a>
+  <a href="#">Aide</a>
+  <a href="#">Conditions générales d'utilisation</a>
+  <a href="#">Mention légales</a>
+
+  <div fxLayout="row" fxLayoutAlign="center">
+    <span>Copyright 2019 - tous droits réservés</span>
+  </div>
 </div>
-<ng-template #display_frontpage>
-  <app-front-page></app-front-page>
-</ng-template>
