@@ -24,6 +24,7 @@ export class UserSearchComponent implements OnInit {
   }
 
   search() {
+    console.log(authConfig.userEndpoint);
     let queryString = this.searchControl.value;
     this.http.get<User[]>(authConfig.userEndpoint + "?q=" + queryString).
       subscribe(results => {
