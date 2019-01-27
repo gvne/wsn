@@ -1,0 +1,7 @@
+<mat-card *ngIf="song" style="display: inline-block">
+  <mat-card-header>
+    <img *ngIf="song.thumbnail" src={{song.thumbnail}} mat-card-avatar/>
+    <mat-card-title>{{song.title}}</mat-card-title>
+    <!-- <mat-card-subtitle>{{user.email}}</mat-card-subtitle> -->
+  </mat-card-header>
+</mat-card>
