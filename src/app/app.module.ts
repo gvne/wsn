@@ -13,6 +13,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatListModule } from '@angular/material/list';
 
 // flex
 import { FlexLayoutModule } from "@angular/flex-layout";
@@ -67,6 +68,7 @@ import { FrontPageComponent } from './front-page/front-page.component';
     MatFormFieldModule,
     MatInputModule,
     MatGridListModule,
+    MatListModule,
 
     FlexLayoutModule
   ],
