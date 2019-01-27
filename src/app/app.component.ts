@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { User } from './user';
+import { LobbyService } from './lobby.service';
+// import { User } from './user';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,11 @@ import { User } from './user';
 export class AppComponent {
   title = 'whatsnext';
 
-  onUserSelected(user: User) {
-    console.log(user);
-  }
+  constructor(
+    private lobby: LobbyService
+  ) {}
+
+  // onUserSelected(user: User) {
+  //   console.log(user);
+  // }
 }

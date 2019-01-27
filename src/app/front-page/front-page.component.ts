@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
+import { LobbyService } from '../lobby.service';
 
 @Component({
   selector: 'app-front-page',
@@ -9,10 +10,15 @@ import { AuthService } from '../auth.service';
 export class FrontPageComponent implements OnInit {
 
   constructor(
-    private auth: AuthService
+    private auth: AuthService,
+    private lobby: LobbyService
   ) { }
 
   ngOnInit() {
+  }
+
+  joinLobby() {
+    
   }
 
 }

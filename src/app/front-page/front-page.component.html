@@ -6,7 +6,12 @@
 </div>
 
 <div *ngIf="auth.loggedInUser;else login_button">
-
+  <div fxLayout="row" fxLayoutAlign="center">
+    <button mat-button (click)="lobby.connect(auth.loggedInUser)">Mon salon</button>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="center">
+    <button mat-button (click)="joinLobby()">Rejoindre des amis</button>
+  </div>
 </div>
 
 <ng-template #login_button>

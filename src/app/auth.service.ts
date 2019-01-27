@@ -17,7 +17,15 @@ import { OAuthToken } from './oauth-token';
   providedIn: 'root'
 })
 export class AuthService {
-  loggedInUser: User = null;
+  loggedInUser: User = //null;
+  {
+    id: "the owner id",
+    username: "guillaume",
+    email: "guillaume.vincke@gmail.com",
+    family_name: "vincke",
+    name: "guillaume vincke",
+    thumbnail: null
+  };
 
   constructor(
     @Inject(DOCUMENT) private document: any,

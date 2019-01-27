@@ -6,14 +6,7 @@ import { Song } from './song';
   providedIn: 'root'
 })
 export class LobbyService {
-  owner: User = {
-    id: "the owner id",
-    username: "guillaume",
-    email: "guillaume.vincke@gmail.com",
-    family_name: "vincke",
-    name: "guillaume vincke",
-    thumbnail: null
-  };
+  owner: User = null;
 
   users: User[] = [
     {
@@ -61,7 +54,8 @@ export class LobbyService {
   constructor() { }
 
 
-  connect(lobbyId: string) {
-
+  connect(owner: User) {
+    // update the owner
+    this.owner = owner;
   }
 }

@@ -1,8 +1,10 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <app-toolbar></app-toolbar>
 
-<div>
-  <app-front-page></app-front-page>
-  <!-- <app-user-search (userSelected)="onUserSelected($event)"></app-user-search> -->
-  <!-- <app-lobby></app-lobby> -->
+<!-- if the lobby owner is set, this means that we are connected to a lobby. We need
+to display the actual app. Else, we just display the front page -->
+<div *ngIf="lobby.owner;else display_frontpage">
+  <app-lobby></app-lobby>
 </div>
+<ng-template #display_frontpage>
+  <app-front-page></app-front-page>
+</ng-template>
