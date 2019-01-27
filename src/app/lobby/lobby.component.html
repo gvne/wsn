@@ -1,2 +1,8 @@
-<!-- <app-user-list [owner]="lobby.owner" [users]="lobby.users"></app-user-list> -->
+<!-- No Need to check the user list when you are a basic user. Only the owner
+should -->
+<div *ngIf="lobby.owner==auth.loggedInUser">
+  <app-user-list [owner]="lobby.owner" [users]="lobby.users"></app-user-list>
+</div>
+
+<!-- But everyone is interested in the playlist -->
 <app-song-list [songs]="lobby.playlist"></app-song-list>
