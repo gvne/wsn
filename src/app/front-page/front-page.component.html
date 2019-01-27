@@ -1,0 +1,16 @@
+<div fxLayout="row" fxLayoutAlign="center">
+  <span>
+    <h1>Vous êtes tous DJ grâce à What's Next !</h1>
+    <h3>Créez vos playlist entre amis</h3>
+  </span>
+</div>
+
+<div *ngIf="auth.loggedInUser;else login_button">
+  
+</div>
+
+<ng-template #login_button>
+  <div fxLayout="row" fxLayoutAlign="center">
+    <button mat-button (click)="auth.login()">Start !</button>
+  </div>
+</ng-template>

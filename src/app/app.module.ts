@@ -31,6 +31,7 @@ import { LobbyComponent } from './lobby/lobby.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { SongListComponent } from './song-list/song-list.component';
 import { SongDetailComponent } from './song-detail/song-detail.component';
+import { FrontPageComponent } from './front-page/front-page.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { SongDetailComponent } from './song-detail/song-detail.component';
     LobbyComponent,
     UserListComponent,
     SongListComponent,
-    SongDetailComponent
+    SongDetailComponent,
+    FrontPageComponent
   ],
   imports: [
     BrowserModule,
