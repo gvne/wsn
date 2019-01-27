@@ -6,7 +6,7 @@
 </div>
 
 <div *ngIf="auth.loggedInUser;else login_button">
-  
+
 </div>
 
 <ng-template #login_button>
@@ -14,3 +14,41 @@
     <button mat-button (click)="auth.login()">Start !</button>
   </div>
 </ng-template>
+
+<div class="secondary" fxLayout="row" fxLayoutAlign="center">
+  <span>
+    <h2>Comment ça marche ?</h2>
+    <h3>Tu te connectes</h3>
+    <!-- TODO: image -->
+    <h3>Tu gères ton salon ou tu rejoins</h3>
+    <!-- TODO: image -->
+    <h3>Tes amis rejoignent le salon</h3>
+    <!-- TODO: image -->
+    <h3>Vous ajoutez vos morceaux</h3>
+    <!-- TODO: image -->
+  </span>
+</div>
+
+<div>
+  <div fxLayout="row" fxLayoutAlign="center">
+    <span>
+      <h2>Les différents rôles</h2>
+    </span>
+  </div>
+  <span>
+    <h3>Le chef du salon</h3>
+    C'est lui qui crée le salon, et c'est de son appareil que sort le son de la
+    playlist. C'est lui qui décide des morceaux joués, de mettre la musique sur
+    pause, il gère le son et
+  </span>
+  <span>
+    <h3>Les invités du salon</h3>
+    Les invités ont la possibilité de rechercher un morceau ou un artiste
+    directement depuis What's Next, et d'ajouter les morceaux choisis à la
+    playlist lue par l'appareil du chef.
+  </span>
+
+  <div fxLayout="row" fxLayoutAlign="center">
+    <button mat-button (click)="auth.login()">I want to try !</button>
+  </div>
+</div>
