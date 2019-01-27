@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { User } from './user';
+import { Song } from './song';
 
 @Injectable({
   providedIn: 'root'
@@ -31,16 +32,36 @@ export class LobbyService {
       name: "Soyu Moxa",
       thumbnail: null
     }
-  ]
+  ];
+
+  currentSong: Song = {
+    id: "1",
+    title: "the first song",
+    thumbnail: null
+  };
+
+  playlist: Song[] = [
+    {
+      id: "1",
+      title: "the first song",
+      thumbnail: null
+    },
+    {
+      id: "2",
+      title: "the second song",
+      thumbnail: null
+    },
+    {
+      id: "3",
+      title: "the third song",
+      thumbnail: null
+    }
+  ];
 
   constructor() { }
 
 
   connect(lobbyId: string) {
-
-  }
-
-  getPlaylist() {
 
   }
 }

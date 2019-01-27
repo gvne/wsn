@@ -28,6 +28,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { DialogButtonComponent } from './dialog-button/dialog-button.component';
 import { UserSearchComponent } from './user-search/user-search.component';
 import { LobbyComponent } from './lobby/lobby.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { SongListComponent } from './song-list/song-list.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { LobbyComponent } from './lobby/lobby.component';
     UserDialog,
     UserSearchDialog,
     UserSearchComponent,
-    LobbyComponent
+    LobbyComponent,
+    UserListComponent,
+    SongListComponent
   ],
   imports: [
     BrowserModule,

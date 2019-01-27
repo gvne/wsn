@@ -1,12 +1,2 @@
-<div>
-  <div>
-    <mat-grid-list cols="1">
-      <mat-grid-tile>
-        <app-user-detail [user]="lobby.owner"></app-user-detail>
-      </mat-grid-tile>
-      <mat-grid-tile *ngFor="let user of lobby.users">
-        <app-user-detail  [user]="user"></app-user-detail>
-      </mat-grid-tile>
-    </mat-grid-list>
-  </div>
-</div>
+<app-user-list [owner]="lobby.owner" [users]="lobby.users"></app-user-list>
+<!-- <app-song-list></app-song-list> -->
