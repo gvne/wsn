@@ -27,6 +27,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DialogButtonComponent } from './dialog-button/dialog-button.component';
 import { UserSearchComponent } from './user-search/user-search.component';
+import { LobbyComponent } from './lobby/lobby.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { UserSearchComponent } from './user-search/user-search.component';
 
     UserDialog,
     UserSearchDialog,
-    UserSearchComponent
+    UserSearchComponent,
+    LobbyComponent
   ],
   imports: [
     BrowserModule,
