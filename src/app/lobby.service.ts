@@ -51,8 +51,7 @@ export class LobbyService {
     }
   ];
 
-  constructor() { }
-
+  constructor() {}
 
   connect(owner: User) {
     // update the owner

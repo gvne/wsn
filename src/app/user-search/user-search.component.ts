@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Inject, EventEmitter, Output, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { FormControl } from '@angular/forms';
@@ -12,6 +12,7 @@ import { authConfig } from '../../environments/auth.environment';
 })
 export class UserSearchComponent implements OnInit {
   @Output() userSelected = new EventEmitter<User>();
+  @Input() placeholder: string = "E-mail";
   private searchControl: FormControl;
   private suggestions: User[];
 
@@ -24,7 +25,6 @@ export class UserSearchComponent implements OnInit {
   }
 
   search() {
-    console.log(authConfig.userEndpoint);
     let queryString = this.searchControl.value;
     this.http.get<User[]>(authConfig.userEndpoint + "?q=" + queryString).
       subscribe(results => {

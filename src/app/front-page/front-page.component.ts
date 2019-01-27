@@ -16,9 +16,9 @@ export class FrontPageComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  joinLobby() {
-    
+  
+  connectUser(user: User) {
+    this.lobby.connect(user);
   }
 
 }

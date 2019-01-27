@@ -10,7 +10,10 @@
     <button mat-button (click)="lobby.connect(auth.loggedInUser)">Mon salon</button>
   </div>
   <div fxLayout="row" fxLayoutAlign="center">
-    <button mat-button (click)="joinLobby()">Rejoindre des amis</button>
+    <app-user-search
+      placeholder="Rejoindre des amis"
+      (userSelected)="connectUser($event)">
+    </app-user-search>
   </div>
 </div>
 
