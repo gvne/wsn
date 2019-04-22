@@ -1,8 +1,25 @@
 <mat-toolbar>
-  <mat-toolbar-row>
-    <span>What's Next ?</span>
-    <!-- <app-dialog-button type="user-search">Join</app-dialog-button> -->
-    <span class="fill-remaining-space"></span>
-    <app-auth></app-auth>
-  </mat-toolbar-row>
+  <span class="logo"><img src="../../assets/img/logo.svg" alt="WhatsNext Logo" width="180px"></span>
+
+  <nav>
+
+    <input type="checkbox" id="nav" class="hidden">
+
+    <!-- Traits du burger menu -->
+    <label for="nav" class="nav-btn">
+      <i></i>
+      <i></i>
+      <i></i>
+    </label>
+
+    <div class="nav-wrapper">
+      <ul>
+        <li><app-auth></app-auth></li>
+        <li><button (click)="auth.login()"><img src="../../assets/img/salon.svg" width="24px" alt="lobby">Lobby</button></li>
+        <li><button (click)="auth.login()"><img src="../../assets/img/search.svg" width="24px" alt="search">Search</button></li>
+        <li><button (click)="auth.login()"><img src="../../assets/img/playlist.svg" width="24px" alt="playlist">Playlist</button></li>
+      </ul>
+    </div>
+
+  </nav>
 </mat-toolbar>
