@@ -42,7 +42,6 @@ nav ul{
 }
 nav ul li{
   display: inline-block;
-  float: left;
 }
 nav ul li:not(:first-child){
   margin-left: 24px;
@@ -55,6 +54,8 @@ nav ul li button{
   text-decoration: none;
   font-size: 16px;
   transition: .2s;
+  background-color: #FFF;
+  border: none;
 }
 nav ul li button:hover{
   color:rgba(158, 73, 16, 1);
@@ -103,6 +104,7 @@ nav ul li button img{
   .nav-wrapper ul li button{
     padding: 10px 24px;
     color:#FFF;
+    background-color: #000;
     font-size: 14px;
     letter-spacing: 1.2px;
     transform: translateX(-20px);
@@ -145,8 +147,9 @@ nav ul li button img{
     width:20px;
   }
 }
-/* fin du media query */
+/* end of media query */
 
+/* burger menu animation */
 #nav:checked + .nav-btn{
   transform: rotate(45deg);
 }
@@ -177,3 +180,5 @@ nav ul li button img{
  .hidden{
    display:none;
  }
+
+/* end of burger menu animation */

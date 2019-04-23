@@ -1,27 +1,32 @@
-<div fxLayout="row" fxLayoutAlign="center">
-  <span>
-    <h1>Vous êtes tous DJ grâce à WhatsNext !</h1>
-    <h3>Créez vos playlists entre amis facilement et rapidement !</h3>
-  </span>
-</div>
+<div class="header">
+      <div class="presentation">
+        <div fxLayout="row" fxLayoutAlign="center">
+            <span>
+                <h1>Vous êtes tous DJ grâce à What's Next !</h1>
+                <h3>Créez vos playlists entre amis facilement et rapidement !</h3>
+            </span>
+        </div>
 
-<div *ngIf="auth.loggedInUser;else login_button">
-  <div fxLayout="row" fxLayoutAlign="center">
-    <button mat-button (click)="lobby.connect(auth.loggedInUser)">Mon salon</button>
-  </div>
-  <div fxLayout="row" fxLayoutAlign="center">
-    <app-user-search
-      placeholder="Rejoindre des amis"
-      (userSelected)="connectUser($event)">
-    </app-user-search>
-  </div>
-</div>
 
-<ng-template #login_button>
-  <div fxLayout="row" fxLayoutAlign="center">
-    <button mat-button (click)="auth.login()">Start !</button>
-  </div>
-</ng-template>
+        <div *ngIf="auth.loggedInUser;else login_button">
+            <div fxLayout="row" fxLayoutAlign="center">
+                <button class="btn-custom mylobby" mat-button (click)="lobby.connect(auth.loggedInUser)">Mon salon</button>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="center">
+                <app-user-search class="btn-custom join"
+                placeholder="Rejoindre des amis"
+                (userSelected)="connectUser($event)">
+                </app-user-search>
+            </div>
+        </div>
+
+        <ng-template #login_button>
+        <div fxLayout="row" fxLayoutAlign="center">
+            <button class="btn-custom" (click)="auth.login()">Start !</button>
+        </div>
+        </ng-template>
+    </div>
+</div>
 
 <div class="secondary" fxLayout="row" fxLayoutAlign="center">
   <span>
