@@ -1,3 +1,4 @@
+<!-- header & presentation section -->
 <div class="header">
       <div class="presentation">
         <div fxLayout="row" fxLayoutAlign="center">
@@ -6,20 +7,17 @@
                 <h3>Créez vos playlists entre amis facilement et rapidement !</h3>
             </span>
         </div>
-
-
         <div *ngIf="auth.loggedInUser;else login_button">
             <div fxLayout="row" fxLayoutAlign="center">
-                <button class="btn-custom mylobby" mat-button (click)="lobby.connect(auth.loggedInUser)">Mon salon</button>
+                <button class="btn-custom mylobby" mat-button (click)="lobby.connect(auth.loggedInUser)">My lobby</button>
             </div>
             <div fxLayout="row" fxLayoutAlign="center">
                 <app-user-search class="btn-custom join"
-                placeholder="Rejoindre des amis"
+                placeholder="Join a lobby"
                 (userSelected)="connectUser($event)">
                 </app-user-search>
             </div>
         </div>
-
         <ng-template #login_button>
         <div fxLayout="row" fxLayoutAlign="center">
             <button class="btn-custom" (click)="auth.login()">Start !</button>
@@ -27,7 +25,8 @@
         </ng-template>
     </div>
 </div>
-
+<!-- END OF header & presentation section -->
+<!-- how it works section -->
 <div class="secondary" fxLayout="row" fxLayoutAlign="center">
   <span>
     <h2>How does it work ?</h2>
@@ -41,27 +40,31 @@
     <img src="https://s3.amazonaws.com/whatsnext-resources/img/tuto4.svg" alt="shows search music" height="195px">
   </span>
 </div>
+<!-- END OF how it works section -->
+<!-- roles section -->
+<div class="roles">
+    <div class="roles-content">
+        <div fxLayout="row" fxLayoutAlign="center">
+            <span>
+            <h2>Les différents rôles</h2>
+            </span>
+        </div>
+        <span>
+            <h3>Le chef du salon</h3>
+            <p>C'est lui qui crée le salon, et c'est de son appareil que sort le son de la
+            playlist. C'est lui qui décide des morceaux joués, de mettre la musique sur
+            pause, il gère le son et le mode de lecture !</p>
+        </span>
+        <span>
+            <h3>Les invités du salon</h3>
+            <p>Les invités ont la possibilité de rechercher un morceau ou un artiste
+            directement depuis What's Next, et d'ajouter les morceaux choisis à la
+            playlist lue par l'appareil du chef.</p>
+        </span>
 
-<div>
-  <div fxLayout="row" fxLayoutAlign="center">
-    <span>
-      <h2>Les différents rôles</h2>
-    </span>
-  </div>
-  <span>
-    <h3>Le chef du salon</h3>
-    C'est lui qui crée le salon, et c'est de son appareil que sort le son de la
-    playlist. C'est lui qui décide des morceaux joués, de mettre la musique sur
-    pause, il gère le son et
-  </span>
-  <span>
-    <h3>Les invités du salon</h3>
-    Les invités ont la possibilité de rechercher un morceau ou un artiste
-    directement depuis What's Next, et d'ajouter les morceaux choisis à la
-    playlist lue par l'appareil du chef.
-  </span>
-
-  <div fxLayout="row" fxLayoutAlign="center">
-    <button mat-button (click)="auth.login()">I want to try !</button>
-  </div>
+        <div fxLayout="row" fxLayoutAlign="center">
+            <button class="btn-custom" mat-button (click)="auth.login()">I want to try !</button>
+        </div>
+    </div>
 </div>
+<!-- END OF roles section -->

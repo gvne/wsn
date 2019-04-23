@@ -18,16 +18,16 @@
 <!-- Footer -->
 <div class="footer">
   <mat-nav-list>
-    <a mat-list-item href="#" *ngIf="auth.loggedInUser ;else show_login">Se déconnecter</a>
+    <a mat-list-item href="#" *ngIf="auth.loggedInUser ;else show_login">Logout</a>
     <ng-template #show_login>
-      <a mat-list-item href="#">Se connecter</a>
+      <a mat-list-item href="#">Login</a>
     </ng-template>
-    <a mat-list-item href="#">Paramètres</a>
-    <a mat-list-item href="#">Aide</a>
-    <a mat-list-item href="#">Conditions générales d'utilisation</a>
-    <a mat-list-item href="#">Mention légales</a>
+    <a mat-list-item href="#">Settings</a>
+    <a mat-list-item href="#">Help</a>
+    <a mat-list-item href="#">Terms and conditions of use</a>
+    <a mat-list-item href="#">Legal</a>
   </mat-nav-list>
   <div fxLayout="row" fxLayoutAlign="center">
-    <span>Copyright 2019 - tous droits réservés</span>
+    <span>Copyright 2019 - All rights reserved</span>
   </div>
 </div>
