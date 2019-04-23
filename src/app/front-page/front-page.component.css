@@ -51,6 +51,7 @@
   .btn-custom.mylobby{
     margin-bottom:20px;
   }
+  /* SHOULD CENTER THE PLACEHOLDER */
   .btn-custom.join{
       line-height:70px;
       text-align: center;
@@ -113,3 +114,4 @@
     font-size:1em;
     margin-bottom: 40px;
 }
+/* END OF roles section */

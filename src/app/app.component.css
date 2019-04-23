@@ -1,0 +1,16 @@
+/* footer */
+.footer{
+    background-color:#000;
+    margin-top:80px;
+}
+.mat-nav-list{
+    color:#da854c;
+    font-size:1em;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.copyright{
+    color:#FFF;
+    font-size: 0.8em;
+    margin-bottom: 25px;
+}
