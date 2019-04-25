@@ -1,5 +1,8 @@
 /* footer */
-.footer{
+.footer-desktop{
+    display:none;
+}
+.footer-mobile, .footer-desktop{
     background-color:#000;
     margin-top:80px;
 }
@@ -11,5 +14,33 @@
 .copyright{
     color:#FFF;
     font-size: 0.8em;
-    margin-bottom: 25px;
+    padding-bottom:25px;
+}
+
+@media screen and (min-width:768px){
+    .footer-mobile{
+        display:none;
+    }
+    .footer-desktop{
+        display:block;
+    }
+    .footer-desktop{
+        width:100%;
+        position: absolute;
+        background-color: #000;
+    }
+    .mat-nav-list .mat-list-item{
+        width:auto;
+        float:left;
+    }
+    .mat-list-item:first-child{
+        margin-right:40px;
+    }
+    .mat-list-item:not(first-child){
+        margin-right:40px;
+        margin-left:40px;
+    }
+    .mat-list-item:last-child{
+        margin-right:0;
+    }
 }

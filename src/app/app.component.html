@@ -16,18 +16,34 @@
 <!-- </mat-drawer-container> -->
 
 <!-- Footer -->
-<div class="footer">
-  <mat-nav-list>
-    <a mat-list-item href="#" *ngIf="auth.loggedInUser ;else show_login">Logout</a>
-    <ng-template #show_login>
-      <a mat-list-item href="#">Login</a>
-    </ng-template>
-    <a mat-list-item href="#">Settings</a>
-    <a mat-list-item href="#">Help</a>
-    <a mat-list-item href="#">Terms and conditions of use</a>
-    <a mat-list-item href="#">Legal</a>
-  </mat-nav-list>
-  <div fxLayout="row" fxLayoutAlign="center">
-    <span class="copyright">Copyright 2019 - All rights reserved</span>
-  </div>
+<div class="footer-desktop">
+        <mat-nav-list fxLayout="row" fxLayoutAlign="center">
+            <a mat-list-item href="#" *ngIf="auth.loggedInUser ;else show_login">Logout</a>
+            <ng-template #show_login>
+            <a mat-list-item href="#">Login</a>
+            </ng-template>
+            <a mat-list-item href="#">Settings</a>
+            <a mat-list-item href="#">Help</a>
+            <a mat-list-item href="#">Terms and conditions of use</a>
+            <a mat-list-item href="#">Legal</a>
+        </mat-nav-list>
+        <div fxLayout="row" fxLayoutAlign="center">
+            <span class="copyright" fxLayout="row" fxLayoutAlign="center">Copyright 2019 - All rights reserved</span>
+        </div>
+</div>
+
+<div class="footer-mobile">
+        <mat-nav-list>
+            <a mat-list-item href="#" *ngIf="auth.loggedInUser ;else show_login">Logout</a>
+            <ng-template #show_login>
+            <a mat-list-item href="#">Login</a>
+            </ng-template>
+            <a mat-list-item href="#">Settings</a>
+            <a mat-list-item href="#">Help</a>
+            <a mat-list-item href="#">Terms and conditions of use</a>
+            <a mat-list-item href="#">Legal</a>
+        </mat-nav-list>
+        <div>
+            <span class="copyright" fxLayout="row" fxLayoutAlign="center">Copyright 2019 - All rights reserved</span>
+        </div>
 </div>
