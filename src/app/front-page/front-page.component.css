@@ -127,7 +127,9 @@
         float:none;
         margin:0;
     }
-    .roles-content{
+}
+@media screen and (max-width:768px){
+        .roles-content{
         left:50%;
         margin-left:-45%;
         top:50%;
