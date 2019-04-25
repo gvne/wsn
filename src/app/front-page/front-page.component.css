@@ -16,6 +16,10 @@
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+.presentation-txt{
+    margin-top:100px;
+    max-width: 500px;
+}
 .presentation h1{
     color:#FFF;
     font-weight: bold;
@@ -27,6 +31,7 @@
     font-family: "Helvetica", sans-serif;
     font-size: 1.4em;
     font-weight: bold;
+    padding-left:50px;
     margin-bottom:80px;
   }
 .btn-custom{
@@ -69,7 +74,7 @@
     font-size:1.6em;
     font-weight:bold;
     color:#000;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
 }
 .secondary h3{
     color:#000;
@@ -129,6 +134,16 @@
     }
 }
 @media screen and (max-width:768px){
+    .presentation img{
+        display:none;
+    }
+    .presentation-txt{
+        margin-top:0;
+        max-width:100%;
+    }
+    .presentation h3{
+        padding-left:0px;
+    }
         .roles-content{
         left:50%;
         margin-left:-45%;
