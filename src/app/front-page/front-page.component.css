@@ -60,9 +60,10 @@
 
 /* "how it works" section */
 .secondary{
+    min-height:80vh;
     background-color: #fff;
     text-align: center;
-    padding:45px 5%;
+    padding:20vh 5%;
 }
 .secondary h2{
     font-size:1.6em;
@@ -77,6 +78,11 @@
 .secondary img{
     margin-top:20px;
     margin-bottom:80px;
+}
+.secondary .tuto-step{
+    float:left;
+    margin-left:30px;
+    margin-right:30px;
 }
 /* end of "how it works" section */
 
@@ -93,7 +99,7 @@
     width:90%;
     position: absolute;
     left:50%;
-    margin-left:-45%;
+    margin-left:-25%;
     top:50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -115,3 +121,17 @@
     margin-bottom: 40px;
 }
 /* END OF roles section */
+
+@media screen and (max-width:1179px){
+    .secondary .tuto-step{
+        float:none;
+        margin:0;
+    }
+    .roles-content{
+        left:50%;
+        margin-left:-45%;
+        top:50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+}
