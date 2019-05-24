@@ -1,0 +1,32 @@
+footer{
+    background-color: #000;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer ul{
+    padding:50px 25px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+}
+footer li a{
+    color:#DB8041;
+    font-weight: normal;
+}
+footer p{
+    color:#FFF;
+    text-align: center;
+    font-size: .9rem;
+}
+
+/* media queries */
+@media screen and (max-width:600px){
+    footer ul{
+        flex-direction: column;
+  }
+    footer li{
+        margin:10px;
+  }
+}
