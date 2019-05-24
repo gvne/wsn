@@ -1,0 +1,29 @@
+header{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color:#DB8041;
+  padding:10px 15px;
+  font-size: 1rem;
+}
+.brand{
+  width:150px;
+}
+nav ul{
+  list-style: none;
+  width:80%;
+}
+.connect{
+  font-weight: normal;
+  background-color: rgba(255, 255, 255, 0.137);
+  box-shadow: 0px 4px 6px 0px rgba(0,0,0,0);
+  padding:10px;
+  border-radius: 3px;
+  transition: .2s;
+}
+.connect:hover{
+  background-color: rgba(255, 255, 255, 0.322);
+  text-decoration: none;
+  box-shadow: 0px 4px 6px 0px rgba(0,0,0,.1);
+}

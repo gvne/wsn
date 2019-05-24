@@ -1,10 +1,16 @@
-<div fxLayout="row" fxLayoutAlign="center">
-  <span>
-    <h1>Vous êtes tous DJ grâce à What's Next !</h1>
-    <h3>Créez vos playlist entre amis</h3>
-  </span>
-</div>
-
+<main>
+  <div class="hero">
+    <div class="hero-img">
+      
+    </div>
+    <div class="hero-txt">
+      <h1>Vous êtes tous DJ grâce à WhatsNext !</h1>
+      <strong>Créez vos playlists entre amis, simplement et rapidement.</strong>
+      <a (click)="auth.login()" class="btn">Commencer !</a>
+    </div>
+  </div>
+</main>
+<!--
 <div *ngIf="auth.loggedInUser;else login_button">
   <div fxLayout="row" fxLayoutAlign="center">
     <button mat-button (click)="lobby.connect(auth.loggedInUser)">Mon salon</button>
@@ -22,6 +28,7 @@
     <button mat-button (click)="auth.login()">Start !</button>
   </div>
 </ng-template>
+-->
 
 <div class="secondary" fxLayout="row" fxLayoutAlign="center">
   <span>

@@ -1,6 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
+body{
+  padding:0;
+  margin:0;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 16px;
+}
+h1{font-size: 3rem;color:#FFF;}
+h2{font-size: 1.8rem;}
+a{
+  text-decoration: none;
+  color:#000;
+  font-weight: bold;
+}
+a:hover{
+  text-decoration: underline;
+}
+.btn{
+  background-color:#000;
+  color:#FFF;
+  padding:20px 40px;
+  text-align: center;
+  border-radius: 40px;
+  width:210px;
+  margin-top:50px;
+  transition: .2s;
+  box-shadow: 0px 4px 6px 0px rgba(0,0,0,0);
+}
+.btn:hover{
+  background-color: #fff;
+  color:#000;
+  text-decoration: none;
+  box-shadow: 0px 4px 6px 0px rgba(0,0,0,.4);
+}
+
 .container {
   display: flex; /* or inline-flex */
   flex-direction: row;
