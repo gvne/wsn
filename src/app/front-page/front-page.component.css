@@ -1,0 +1,108 @@
+main{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* ************ HERO PART  ************ */
+.hero{
+  width:80vw;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;
+  padding:50px 10vw;
+  background:url(http://ronanlebideau.com/text_wn/img/hero.jpg) repeat-x fixed center;
+  background-size: cover;
+}
+.hero-img img{
+  max-height:70vh;
+  position:relative;
+  margin-right: 20px;
+  -webkit-animation-name: fly;
+  -webkit-animation-duration:3s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-name:fly;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes fly {
+  0%    {top:-10px;}
+  50%   {top:10px;}
+  100%  {top:-10px;}
+}
+/* Standard syntax */
+@keyframes fly {
+  0%    {top:-10px;}
+  50%   {top:10px;}
+  100%  {top:-10px;}
+}
+.hero-txt{
+  display:flex;
+  flex-direction: column;
+  max-width:480px;
+}
+.hero-txt strong{
+  font-size: 1.5rem;
+}
+/* ************ END HERO PART  ************ */
+
+/* ************ TUTO PART  ************ */
+.tuto{
+  background-color: #fff;
+  padding:50px 0;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.tuto h2{
+  color:#DB8041;
+  text-align: center;
+}
+.steps{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.part{
+  padding:50px;
+  width:200px;
+  text-align: center;
+}
+.part em{
+  font-style: normal;
+  font-size: 1.2rem;
+}
+/* ************ END TUTO PART  ************ */
+
+/* ************ DETAILS PART  ************ */
+article{
+  width:100%;
+  background:url(http://ronanlebideau.com/text_wn/img/illustration_bg.svg) no-repeat center;
+  background-size: cover;
+  margin-bottom:100px;
+}
+.details{
+  padding:100px 25px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.details h2{
+  color:#FFF;
+}
+.role{
+  display:block;
+  max-width: 480px;
+}
+/* ************ END DETAILS PART  ************ */
+
+/* ************ media queries ************ */
+@media screen and (max-width:600px){
+  .hero-img{
+    display:none;
+  }
+}
